@@ -2,6 +2,26 @@ const phoneNumber = "919999999999";
 
 const navLinks = document.querySelector(".nav-links");
 const menuToggle = document.querySelector(".menu-toggle");
+const promoPopup = document.querySelector("#promo-popup");
+const promoPopupClose = document.querySelector(".promo-popup-close");
+
+if (promoPopup) {
+  window.addEventListener("load", () => {
+    promoPopup.classList.add("open");
+  });
+
+  promoPopup.addEventListener("click", (event) => {
+    if (event.target === promoPopup) {
+      promoPopup.classList.remove("open");
+    }
+  });
+}
+
+if (promoPopupClose) {
+  promoPopupClose.addEventListener("click", () => {
+    promoPopup.classList.remove("open");
+  });
+}
 
 if (menuToggle && navLinks) {
   menuToggle.addEventListener("click", () => {
@@ -101,6 +121,7 @@ if (lightboxClose) {
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") closeLightbox();
+  if (event.key === "Escape" && promoPopup) promoPopup.classList.remove("open");
 });
 
 const bookingForm = document.querySelector("#booking-form");

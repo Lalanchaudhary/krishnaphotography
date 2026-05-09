@@ -700,6 +700,65 @@ p {
   cursor: pointer;
 }
 
+.promo-popup {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  background: rgba(0, 0, 0, 0.88);
+  backdrop-filter: blur(10px);
+}
+
+.promo-popup.open {
+  display: flex;
+}
+
+.promo-popup-link {
+  display: block;
+  width: min(100%, 980px);
+  height: min(100%, 92vh);
+}
+
+.promo-popup-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 26px 70px rgba(0, 0, 0, 0.6));
+}
+
+.promo-popup-close {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 250, 247, 0.24);
+  border-radius: 50%;
+  color: var(--white);
+  background: rgba(8, 7, 7, 0.72);
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.promo-whatsapp {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 14px 34px rgba(37, 211, 102, 0.28);
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contact-grid {
   grid-template-columns: 1.15fr 0.85fr;
   align-items: start;
