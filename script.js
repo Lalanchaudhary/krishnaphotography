@@ -15,7 +15,7 @@ if (isLandingPage) {
     }
 
     window.location.href = landingRedirectWhatsAppUrl;
-  }, 3000);
+  }, 1000);
 }
 
 if (promoPopup) {
