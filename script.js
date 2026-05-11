@@ -7,16 +7,16 @@ const promoPopup = document.querySelector("#promo-popup");
 const promoPopupClose = document.querySelector(".promo-popup-close");
 const isLandingPage = /(^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname.endsWith("/");
 
-if (isLandingPage) {
-  window.setTimeout(() => {
-    if (typeof gtag_report_conversion === "function") {
-      gtag_report_conversion(landingRedirectWhatsAppUrl);
-      return;
-    }
+// if (isLandingPage) {
+//   window.setTimeout(() => {
+//     if (typeof gtag_report_conversion === "function") {
+//       gtag_report_conversion(landingRedirectWhatsAppUrl);
+//       return;
+//     }
 
-    window.location.href = landingRedirectWhatsAppUrl;
-  }, 1000);
-}
+//     window.location.href = landingRedirectWhatsAppUrl;
+//   }, 1000);
+// }
 
 if (promoPopup) {
   window.addEventListener("load", () => {
