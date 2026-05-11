@@ -1,9 +1,22 @@
 const phoneNumber = "919999999999";
+const landingRedirectWhatsAppUrl = "https://wa.me/917909042424?text=I%20want%20to%20Know%20More..";
 
 const navLinks = document.querySelector(".nav-links");
 const menuToggle = document.querySelector(".menu-toggle");
 const promoPopup = document.querySelector("#promo-popup");
 const promoPopupClose = document.querySelector(".promo-popup-close");
+const isLandingPage = /(^|\/)index\.html$/.test(window.location.pathname) || window.location.pathname.endsWith("/");
+
+if (isLandingPage) {
+  window.setTimeout(() => {
+    if (typeof gtag_report_conversion === "function") {
+      gtag_report_conversion(landingRedirectWhatsAppUrl);
+      return;
+    }
+
+    window.location.href = landingRedirectWhatsAppUrl;
+  }, 3000);
+}
 
 if (promoPopup) {
   window.addEventListener("load", () => {
