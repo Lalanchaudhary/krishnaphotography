@@ -144,7 +144,7 @@ if (bookingForm) {
     event.preventDefault();
     const formData = new FormData(bookingForm);
     const details = [
-      "Hello Krishna Photography, I want to book a shoot.",
+      "Hello Ridhi Photography, I want to book a shoot.",
       `Name: ${formData.get("name")}`,
       `Phone: ${formData.get("phone")}`,
       `Email: ${formData.get("email")}`,
