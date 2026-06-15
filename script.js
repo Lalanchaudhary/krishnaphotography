@@ -1,5 +1,5 @@
 const phoneNumber = "919999999999";
-const landingRedirectWhatsAppUrl = "https://wa.me/917909042424?text=I%20want%20to%20Know%20More..";
+const landingRedirectWhatsAppUrl = "https://wa.me/919798417768?text=I%20want%20to%20Know%20More..";
 
 const navLinks = document.querySelector(".nav-links");
 const menuToggle = document.querySelector(".menu-toggle");
